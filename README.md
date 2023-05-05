@@ -1,4 +1,4 @@
-# Trees (generic)
+# Lecture 8 Trees (generic)
 > ## Binary Trees
 >> ## Binary Search Trees
 
