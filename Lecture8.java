@@ -15,6 +15,25 @@ class Lecture8
     public static int isSumTree(Node root)
     {
         //TODO
+        //An if statement for the empty tree
+        if (root == null) 
+        {
+            return 0;
+        }
+
+        //Value of each leaf node
+        if (root.left == null && root.right == null) {
+            return root.key;
+        }
+
+        //Sum of elements in left and right subtree
+        int left = isSumTree(root.left);
+        int right = isSumTree(root.right);
+
+        //Checking if node's value = sum of elements in left and right subtrees
+        if (left != Integer.MIN_VALUE && right != Integer.MIN_VALUE && root.key == left + right) {
+            return 2 * root.key;
+        }  
  
         return Integer.MIN_VALUE;
     }
